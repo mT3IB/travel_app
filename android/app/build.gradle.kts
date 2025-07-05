@@ -7,8 +7,8 @@ plugins {
 
 android {
     compileSdk = 34
-
     ndkVersion = "27.0.12077973"
+    namespace = "com.example.travel_app"
 
     defaultConfig {
         applicationId = "com.example.travel_app"
@@ -18,14 +18,14 @@ android {
         versionName = flutter.versionName
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("debug")
         }
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 }
 
